@@ -1,2 +1,1 @@
-lightadmin-springboot
-=====================
+LightAdmin and Spring Boot integration example
