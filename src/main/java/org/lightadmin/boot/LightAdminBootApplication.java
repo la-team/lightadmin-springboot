@@ -55,7 +55,9 @@ public class LightAdminBootApplication extends SpringBootServletInitializer {
 
     @Bean
     public ServletContextInitializer lightConfigurerServletContextInitializer() {
-        return new LightConfigurerServletContextInitializer("/logger");
+        return new LightConfigurerServletContextInitializer("/logger")
+                .backToSiteUrl("http://lightadmin.org")
+                .demoMode();
     }
 
     public static void main(String[] args) throws Exception {
