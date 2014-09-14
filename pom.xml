@@ -27,6 +27,8 @@
         <tomcat.version>8.0.8</tomcat.version>
 
         <lightadmin.version>1.0.1.BUILD-SNAPSHOT</lightadmin.version>
+        <light-logging-configurer.version>1.0.0.BUILD-SNAPSHOT</light-logging-configurer.version>
+
         <springloaded.version>1.2.0.RELEASE</springloaded.version>
     </properties>
 
@@ -36,6 +38,13 @@
             <artifactId>lightadmin</artifactId>
             <version>${lightadmin.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.lightadmin</groupId>
+            <artifactId>light-logging-configurer</artifactId>
+            <version>${light-logging-configurer.version}</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -50,6 +59,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
