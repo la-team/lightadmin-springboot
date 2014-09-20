@@ -8,21 +8,19 @@
         </encoder>
     </appender>
 
-    <appender name="MessageSendingAppender" class="org.lightadmin.logging.configurer.logback.MessageSendingAppender"/>
-
     <logger name="javax.activation" level="WARN"/>
     <logger name="org.lightadmin" level="INFO"/>
     <logger name="ch.qos.logback" level="WARN"/>
     <logger name="org.apache" level="WARN"/>
-    <logger name="org.springframework" level="DEBUG"/>
-    <logger name="org.thymeleaf" level="DEBUG"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.thymeleaf" level="WARN"/>
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
         <resetJUL>true</resetJUL>
     </contextListener>
 
     <root level="WARN">
-        <appender-ref ref="MessageSendingAppender"/>
+        <appender-ref ref="CONSOLE"/>
     </root>
 
 </configuration>
