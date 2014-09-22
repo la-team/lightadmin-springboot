@@ -11,6 +11,7 @@
     <groupId>org.lightadmin</groupId>
     <artifactId>lightadmin-springboot</artifactId>
 
+<!--  Please change packaging to "war" for deploying as a web module to servlet container  -->
     <packaging>jar</packaging>
     <name>LightAdmin Spring Boot</name>
     <version>1.0.1.BUILD-SNAPSHOT</version>
@@ -20,10 +21,6 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
 
-        <java.version>1.7</java.version>
-
-        <main.basedir>${basedir}/../..</main.basedir>
-        <m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
         <tomcat.version>8.0.8</tomcat.version>
 
         <lightadmin.version>1.1.0.BUILD-SNAPSHOT</lightadmin.version>
@@ -36,6 +33,7 @@
             <artifactId>lightadmin</artifactId>
             <version>${lightadmin.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -43,13 +41,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-jetty</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
@@ -58,14 +55,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
+            <!--  Please change scope to "provided" for deploying as a web module to servlet container  -->
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
+            <!--  Please change scope to "provided" for deploying as a web module to servlet container  -->
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
