@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Spring Boot/Thymeleaf/LightAdmin integration example</title>
+</head>
+<body>
+<h1>Thymeleaf index page</h1>
+
+<p>
+    <em>Simple front-end example using thymeleaf template engine
+        (spring boot standard) and spring mvc to pass repository data to page</em>
+</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>City</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="h : ${hotels}">
+        <td th:text="${h.id}">id</td>
+        <td th:text="${h.city}">name</td>
+        <td th:text="${h.name}">icon</td>
+        <td th:text="${h.address}">unitaryPrice</td>
+        <td th:text="${h.zip}">description</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
