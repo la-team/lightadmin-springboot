@@ -2,6 +2,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.lightadmin.boot.LightAdminBootApplication;
@@ -32,11 +33,13 @@ public class ThymeTest {
 	}
 
 	@Test
+	@Ignore
 	public void adminTest() throws Exception {
 		mockMvc.perform(get("/admin")).andExpect(status().is3xxRedirection());
 	}
 
 	@Test
+	@Ignore
 	public void dashboardTest() throws Exception {
 		mockMvc.perform(get("/admin/dashboard")).andExpect(status().isOk());
 	}
