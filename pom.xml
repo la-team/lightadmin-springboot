@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.1.6.RELEASE</version>
+        <version>1.2.3.RELEASE</version>
     </parent>
 
     <groupId>org.lightadmin</groupId>
@@ -14,19 +14,16 @@
     <!--  Please change packaging to "war" for deploying as a web module to servlet container  -->
     <packaging>jar</packaging>
     <name>LightAdmin Spring Boot</name>
-    <version>1.1.0.BUILD-SNAPSHOT</version>
+    <version>1.2.0.BUILD-SNAPSHOT</version>
     <description>Spring Boot Integration Sample</description>
 
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
 
-        <tomcat.version>8.0.8</tomcat.version>
+        <tomcat.version>8.0.15</tomcat.version>
 
-        <spring.version>4.1.0.RELEASE</spring.version>
-
-        <lightadmin.version>1.1.0.BUILD-SNAPSHOT</lightadmin.version>
-        <springloaded.version>1.2.0.RELEASE</springloaded.version>
+        <lightadmin.version>1.2.0.BUILD-SNAPSHOT</lightadmin.version>
     </properties>
 
     <dependencies>
@@ -82,13 +79,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>springloaded</artifactId>
-                        <version>${springloaded.version}</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
                     <jvmArguments>
                         -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
