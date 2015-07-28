@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.3.RELEASE</version>
+        <version>1.2.5.RELEASE</version>
     </parent>
 
     <groupId>org.lightadmin</groupId>
@@ -23,7 +23,7 @@
 
         <tomcat.version>8.0.15</tomcat.version>
 
-        <lightadmin.version>1.2.0.BUILD-SNAPSHOT</lightadmin.version>
+        <lightadmin.version>1.2.0.RC1</lightadmin.version>
     </properties>
 
     <dependencies>

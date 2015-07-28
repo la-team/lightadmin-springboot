@@ -1,0 +1,57 @@
+buildscript {
+  ext {
+    springBootVersion = '1.2.5.RELEASE'
+  }
+  repositories {
+    // NOTE: You should declare only repositories that you need here
+    mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/release" }
+    maven { url "http://repo.spring.io/milestone" }
+    //maven { url "http://repo.spring.io/snapshot" }
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'lightadmin-springboot'
+  version =  '0.0.1'
+}
+
+run {
+  systemProperties = System.properties
+}
+
+repositories {
+  // NOTE: You should declare only repositories that you need here
+  mavenLocal()
+  mavenCentral()
+  maven { url "http://repo.spring.io/release" }
+  maven { url "http://repo.spring.io/milestone" }
+  //maven { url "http://repo.spring.io/snapshot" }
+}
+
+dependencies {
+  compile("org.lightadmin:lightadmin:1.2.0.RC1")
+  compile("org.springframework.boot:spring-boot-starter-data-jpa")
+  compile("org.springframework.boot:spring-boot-starter-web")
+  compile("org.springframework.boot:spring-boot-starter-logging")
+  compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+  compile("org.springframework.boot:spring-boot-starter-tomcat")
+  compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+  runtime("org.hsqldb:hsqldb")
+  testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.6'
+}
+
+
