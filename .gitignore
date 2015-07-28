@@ -11,3 +11,4 @@ target
 *.swp
 .gradle
 build
+/bin/
