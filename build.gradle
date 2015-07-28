@@ -45,6 +45,7 @@ dependencies {
   compile("org.springframework.boot:spring-boot-starter-logging")
   compile("org.springframework.boot:spring-boot-starter-thymeleaf")
   compile("org.springframework.boot:spring-boot-starter-tomcat")
+  compile("org.springframework.boot:spring-boot-starter-security")
   compile("org.apache.tomcat.embed:tomcat-embed-jasper")
   runtime("org.hsqldb:hsqldb")
   testCompile("org.springframework.boot:spring-boot-starter-test")

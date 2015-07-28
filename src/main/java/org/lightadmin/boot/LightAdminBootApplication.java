@@ -51,7 +51,7 @@ public class LightAdminBootApplication extends SpringBootServletInitializer {
                 LightAdmin.configure(servletContext)
                         .basePackage("org.lightadmin.boot.administration")
                         .baseUrl("/admin")
-                        .security(false)
+                        .security(true)
                         .backToSiteUrl("http://lightadmin.org");
 
                 new LightAdminWebApplicationInitializer().onStartup(servletContext);
