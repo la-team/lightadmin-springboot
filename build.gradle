@@ -21,8 +21,8 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-  baseName = 'lightadmin-springboot'
-  version =  '0.0.1'
+  baseName = 'lightadmin-springboot-demo'
+  version =  '0.0.1-SNAPSHOT'
 }
 
 run {
@@ -49,9 +49,3 @@ dependencies {
   runtime("org.hsqldb:hsqldb")
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
-
-task wrapper(type: Wrapper) {
-  gradleVersion = '1.6'
-}
-
-
