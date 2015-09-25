@@ -8,3 +8,7 @@ target
 .merge_file*
 .sass-cache
 .DS_Store
+*.swp
+.gradle
+build
+/bin/
