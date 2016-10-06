@@ -73,6 +73,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    
     <build>
         <finalName>lightadmin-boot</finalName>
         <plugins>
